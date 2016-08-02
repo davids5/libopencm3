@@ -485,10 +485,10 @@ void rcc_osc_on(enum rcc_osc osc)
 		RCC_CSR |= RCC_CSR_LSION;
 		break;
 	case RCC_PLLSAI:
-		RCC_CSR |= RCC_CR_PLLSAION;
+		RCC_CR |= RCC_CR_PLLSAION;
 		break;
 	case RCC_PLLI2S:
-		RCC_CSR |= RCC_CR_PLLI2SON;
+		RCC_CR |= RCC_CR_PLLI2SON;
 		break;
 	}
 }
@@ -512,10 +512,10 @@ void rcc_osc_off(enum rcc_osc osc)
 		RCC_CSR &= ~RCC_CSR_LSION;
 		break;
 	case RCC_PLLSAI:
-		RCC_CSR &= ~RCC_CR_PLLSAION;
+		RCC_CR &= ~RCC_CR_PLLSAION;
 		break;
 	case RCC_PLLI2S:
-		RCC_CSR &= ~RCC_CR_PLLI2SON;
+		RCC_CR &= ~RCC_CR_PLLI2SON;
 		break;
 	}
 }
